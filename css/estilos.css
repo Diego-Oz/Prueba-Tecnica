@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+body{
+    font-family: 'Paytone One', sans-serif;
+    text-align: center;
+    font-size: 120%;
+    color: #000;
+    background: linear-gradient(-45deg, #17A589, #062c52, #062c52, #23D5AB);
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+}
+
+h1{
+    font-size: 30px;
+    color: white;
+}
+
+h2{
+    font-size: 20px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.box{
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: -1px 8px 15px 0px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    
+}
+
+.btn-comenzar{
+    min-width: 250px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(102deg, #31bcee 40%, #23A6D5 60%);
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+
+.qa_box{
+    width: 500px;
+    padding: 20px;
+    min-height: 100px;
+    background-color:#fff;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.qa_header{
+    background-color: #0b58a7;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin: -20px -20px 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.qa_set{
+    display: none;
+    padding: 10px;
+}
+
+.qa_set.active{
+    display: block;
+}
+
+.qa_set h4{
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.qa_ans{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.qa_ans input{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.qa_ans span{
+    display: block;
+    padding: 8px 15px;
+    background-color: #2e86c18a;
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+}
+
+.qa_ans:hover span{
+    background-color: #23A6D5;
+}
+
+.qa_ans input:checked + span{
+    background-color: #f93c3c;
+    color: #fff;
+}
+
+.qa_ans input[valid]:checked + span{
+    background-color: green;
+    color: #fff;
+}
+
+.qa_footer{
+    padding: 10px 0 0;
+    text-align: right;
+}
+
+.btn1, .btn2{
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #0b58a7;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.btn1:hover, .btn2:hover{
+    background-color: #064484;
+}
+
+#pfinal{
+    font-size: 30px;
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }    
+}
+
+@keyframes pulse {
+    0%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(256,256,256, 0);
+    }
+    100%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256,256,256, 0);
+    }  
+}
